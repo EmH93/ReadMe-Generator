@@ -11,7 +11,9 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
+  - [Tests](#tests)
   - [License](#license)
+  - [Questions](#questions)
   
   ## Installation  
   
@@ -21,14 +23,24 @@ function generateMarkdown(data) {
   
   ${data.usage}
   
-  ## Credits  
+  ## Contributing 
   
   ${data.credits}
+
+  ## Tests
+
+  ${data.tests}
   
   ## License  
 
   ${data.license}
+
+  ## Questions
   
+  If you have any questions about this project you can contact me via GitHub or email:  
+  - [My GitHub username is ${data.gitHub}](https://github.com/${data.gitHub})
+  - My email address is: ${data.email}
+
 `;
 }
 

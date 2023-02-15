@@ -33,8 +33,24 @@ const userQuestions = () =>
         },
         {
             type: 'input',
+            name: 'tests',
+            message: 'Complete any testing information here:',
+        },
+        {
+            type: 'checkbox',
             name: 'license',
             message: 'What license does your project have?',
+            choices: ['MIT License', 'Apache License v2.0', 'GNU General Public License v3.0'],
+        },
+        {
+            type: 'input',
+            name: 'gitHub',
+            message: 'What is your GitHub username?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
         }
 
 ]);

@@ -8,7 +8,7 @@ const userQuestions = () =>
     inquirer.prompt([
         {
             type: 'input',
-            name: 'project-Title',
+            name: 'title',
             message: 'What is your project title?', 
         },
         {
@@ -45,6 +45,7 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
+    userQuestions();
 
 }
 

@@ -59,7 +59,6 @@ const userQuestions = () =>
 function writeToFile(fileName, data) {
     userQuestions()
         .then((data) => fs.writeFileSync("Test.md", generateMarkdown(data)))
-        .then((data) => fs.renameSync('Test.md', `${data.title}.md`))
         .then(() => console.log('ReadMe file written successfully.'))
         .catch((err) => console.error(err));
 }

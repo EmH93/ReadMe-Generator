@@ -1,6 +1,18 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  var licenseIcon
+
+  if(data.license === "MIT License"){
+    licenseIcon = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  } else if (data.license === "Apache License v2.0") {
+    licenseIcon = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  } else if (data.license === "GNU General Public License v3.0") {
+    licenseIcon = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  };
+
   return `# ${data.title}  
+
+  ${licenseIcon}
 
   ## Description  
   

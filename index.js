@@ -41,11 +41,16 @@ const userQuestions = () =>
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fileName = data.title;
+    userQuestions()
+        .then((data) => writeFileAsync(`${fileName}.md`, generateMarkdown(data)))
+        .then(() => console.log('ReadMe file written successfully.'))
+        .catch((err) => console.error(err));
 }
 
 // function to initialize program
 function init() {
-    userQuestions();
+    writeToFile();
 
 }
 

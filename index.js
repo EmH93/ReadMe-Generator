@@ -37,7 +37,7 @@ const userQuestions = () =>
             message: 'Complete any testing information here:',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'What license does your project have?',
             choices: ['MIT License', 'Apache License v2.0', 'GNU General Public License v3.0'],
@@ -58,7 +58,7 @@ const userQuestions = () =>
 // function to write README file
 function writeToFile(fileName, data) {
     userQuestions()
-        .then((data) => fs.writeFileSync("ReadMe.md", generateMarkdown(data)))
+        .then((data) => fs.writeFileSync(path.join("Test-ReadMe-Files", "ReadMe.md"), generateMarkdown(data)))
         .then(() => console.log('ReadMe file written successfully.'))
         .catch((err) => console.error(err));
 }

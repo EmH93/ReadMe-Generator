@@ -58,7 +58,7 @@ const userQuestions = () =>
 // function to write README file
 function writeToFile(fileName, data) {
     userQuestions()
-        .then((data) => fs.writeFileSync(path.join("Test-ReadMe-Files", "ReadMe.md"), generateMarkdown(data)))
+        .then((data) => fs.writeFileSync(path.join("Test-ReadMe-Files", "README.md"), generateMarkdown(data)))
         .then(() => console.log('ReadMe file written successfully.'))
         .catch((err) => console.error(err));
 }

@@ -41,9 +41,9 @@ const userQuestions = () =>
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fileName = data.title;
     userQuestions()
-        .then((data) => writeFileAsync(`${fileName}.md`, generateMarkdown(data)))
+        .then((data) => fs.writeFileSync("Test.md", generateMarkdown(data)))
+        .then((data) => fs.renameSync('Test.md', `${data.title}.md`))
         .then(() => console.log('ReadMe file written successfully.'))
         .catch((err) => console.error(err));
 }

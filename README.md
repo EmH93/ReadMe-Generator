@@ -11,7 +11,7 @@ The aim of this project was to create a node file that would allow the user to a
 
 Clone the files from the repo. Users will need Node.js installed to use this project. Users will also need to run "npm init" and "npm install --save inquirer@^8.0.0" in the folder before they can run the file. Once installed, the application can be started by typing "node index.js" in the command line.
 
-Alternatively, you can watch a demo of this project here: 
+Alternatively, you can watch a demo of this project here: [ReadMe-Generator Walkthrough](https://watch.screencastify.com/v/5h6PXzYUG2SV91GbPaU9)
 
 ## Usage
 
